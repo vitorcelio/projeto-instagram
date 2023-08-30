@@ -1,0 +1,44 @@
+@mixin responsive($screenWidth) {
+  @media (max-width: $screenWidth) {
+    @content;
+  }
+}
+
+@mixin display-flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin story-foto($diametro) {
+  border-radius: 5rem;
+  background-image: linear-gradient(
+    270deg,
+    #ff9c2b 0%,
+    #ff2689 66.33%,
+    #9747ff 100%
+  );
+  background-origin: border-box;
+  box-shadow: inset .1rem 100rem .1rem white;
+  border: 0.219rem solid transparent;
+  width: $diametro;
+  min-width: $diametro;
+  height: $diametro;
+  @include display-flex(center, center, row);
+
+  &.desativado {
+    background-image: none;
+    box-shadow: none;
+  }
+
+  img {
+    border-radius: 5rem;
+    width: $diametro - 0.8rem;
+    min-width: $diametro - 0.8rem;
+    max-width: $diametro - 0.8rem;
+    height: $diametro - 0.8rem;
+    min-height: $diametro - 0.8rem;
+    max-height: $diametro - 0.8rem;
+  }
+}

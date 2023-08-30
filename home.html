@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="./img/logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Instagram</title>
+  </head>
+  <body id="app">
+    <section class="s-principal">
+      <header>
+        <a class="logo" href=""></a>
+        <div class="input-notificacao">
+          <div class="input-pesquisar">
+            <i class="icon-input-pesquisar"></i>
+            <input type="text" name="" id="" placeholder="Pesquisar" />
+          </div>
+          <a href="" class="btn-menu">
+            <i class="icon-coracao"></i>
+            <small style="padding: 1px !important; width: 12px; height: 12px; top: 7px; left: 26px"></small>
+          </a>
+        </div>
+      </header>
+
+      <div class="areas" id="areas">
+        <div class="left">
+          <div class="menu">
+            <a class="logo"></a>
+            <nav>
+              <ul>
+                <li>
+                  <a href="" class="btn-menu ativa" id="home-menu">
+                    <i class="icon-home-ativo"></i>
+                    <span>Página inicial</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn-menu" id="search-menu">
+                    <i class="icon-search"></i>
+                    <span>Pesquisar</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="btn-menu">
+                    <i class="icon-explore"></i>
+                    <span>Explorar</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="btn-menu">
+                    <i class="icon-reels"></i>
+                    <span>Reels</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="btn-menu">
+                    <i class="icon-messenger"></i>
+                    <span>Mensagens</span>
+                    <small>2</small>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn-menu" id="notificacao-menu">
+                    <i class="icon-coracao"></i>
+                    <span>Notificações</span>
+                    <small style="padding: 1px !important; width: 12px; height: 12px; top: 5px; left: 26px"></small>
+                    <div class="notificacao-alerta">
+                      <i class="icon-curtir-alert"></i>
+                      <span class="alert">4</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn-menu" id="criar-menu">
+                    <i class="icon-criar"></i>
+                    <span>Criar</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="btn-menu">
+                    <img src="./img/eu.jpeg" alt="perfil" width="24" height="24" class="perfil" />
+                    <span>Perfil</span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="btn-mais">
+                <button class="btn-menu">
+                  <img src="./img/menu-mais.svg" alt="" />
+                  <span>Mais</span>
+                </button>
+                <div class="drop-mais">
+                  <div class="pages">
+                    <a href="">
+                      <img src="./img/configuração.svg" alt="" />
+                      <span>Configurações</span>
+                    </a>
+                    <a href="">
+                      <img src="./img/salvos.svg" alt="" />
+                      <span>Salvos</span>
+                    </a>
+                  </div>
+                  <hr class="espaco1" />
+                  <div class="pages">
+                    <a href="">
+                      <span>Trocar de conta</span>
+                    </a>
+                  </div>
+                  <hr class="espaco2" />
+                  <div class="pages">
+                    <a href="">
+                      <span>Sair</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="search" id="search" onblur="hiddenDiv(this)">
+            <div class="search-body">
+              <div class="search-peoples">
+                <h3>Pesquisar</h3>
+                <div class="input-pesquisar">
+                  <i class="icon-input-pesquisar"></i>
+                  <input type="text" name="" id="" placeholder="Pesquisar" />
+                </div>
+              </div>
+              <div class="search-results">
+                <div class="recents">
+                  <h4>Recentes</h4>
+                  <button type="button" class="btn-seguir-recentes">Limpar tudo</button>
+                </div>
+                <div class="list-peoples">
+                  <div class="people-profile">
+                    <a href="" class="info">
+                      <img src="./img/storys/pessoa5.jpg" alt="" />
+                      <div class="text">
+                        <p>maria</p>
+                        <h4>Maria O.</h4>
+                      </div>
+                    </a>
+                    <button>
+                      <img src="./img/Fechar.svg" alt="" />
+                    </button>
+                  </div>
+                  <div class="people-profile">
+                    <a href="" class="info">
+                      <img src="./img/storys/pessoa2.jpg" alt="" />
+                      <div class="text">
+                        <p>renata</p>
+                        <h4>Renata I.</h4>
+                      </div>
+                    </a>
+                    <button>
+                      <img src="./img/Fechar.svg" alt="" />
+                    </button>
+                  </div>
+                  <div class="people-profile">
+                    <a href="" class="info">
+                      <img src="./img/storys/pessoa4.jpg" alt="" />
+                      <div class="text">
+                        <p>jonatan</p>
+                        <h4>Jonatan P.</h4>
+                      </div>
+                    </a>
+                    <button>
+                      <img src="./img/Fechar.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notificacoes" id="notificacoes" onblur="hiddenDiv(this)">
+            <div class="notificacoes-body">
+              <div class="notificacoes-title">
+                <h3>Notificações</h3>
+              </div>
+              <div class="notificacoes-todas">
+                <div class="notificacoes-list">
+                  <h4>Hoje</h4>
+                  <div class="notificacoes-profile">
+                    <div class="info">
+                      <img src="./img/sugestoes/pessoa1.jpg" alt="" />
+                      <div class="text">
+                        <p><a href="" class="profile">henrique</a> começou a seguir você <span class="time"> 2 h</span></p>
+                      </div>
+                    </div>
+                    <button class="botao-padrao">Seguir</button>
+                  </div>
+                  <div class="notificacoes-profile">
+                    <div class="info">
+                      <img src="./img/storys/pessoa5.jpg" alt="" />
+                      <div class="text">
+                        <p><a href="" class="profile">maria</a> curtiu seu story <span class="time"> 18 h</span></p>
+                      </div>
+                    </div>
+                    <a class="pub-ligada">
+                      <img src="./img/eu.jpeg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div class="notificacoes-list">
+                  <h4>Esta semana</h4>
+                  <div class="notificacoes-profile">
+                    <div class="info">
+                      <img src="./img/storys/pessoa2.jpg" alt="" />
+                      <div class="text">
+                        <p><a href="" class="profile">renata</a> começou a seguir você <span class="time"> 2 d</span></p>
+                      </div>
+                    </div>
+                    <button class="botao-padrao">Seguir</button>
+                  </div>
+                  <div class="notificacoes-profile">
+                    <div class="info">
+                      <img src="./img/storys/pessoa2.jpg" alt="" />
+                      <div class="text">
+                        <p><a href="" class="profile">renata</a> curtiu seu story <span class="time"> 2 d</span></p>
+                      </div>
+                    </div>
+                    <a class="pub-ligada">
+                      <img src="./img/eu.jpeg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div class="notificacoes-list">
+                  <h4>Este mês</h4>
+                  <div class="notificacoes-profile">
+                    <div class="info">
+                      <img src="./img/sugestoes/pessoa3.jpg" alt="" />
+                      <div class="text">
+                        <p><a href="" class="profile">morgana</a> começou a seguir você <span class="time"> 2 sem</span></p>
+                      </div>
+                    </div>
+                    <button class="botao-padrao">Seguir</button>
+                  </div>
+                  <div class="notificacoes-profile">
+                    <div class="info">
+                      <img src="./img/sugestoes/pessoa3.jpg" alt="" />
+                      <div class="text">
+                        <p><a href="" class="profile">morgana</a> curtiu seu story <span class="time"> 2 sem</span></p>
+                      </div>
+                    </div>
+                    <a class="pub-ligada">
+                      <img src="./img/eu.jpeg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div class="notificacoes-list">
+                  <h4>Anteriores</h4>
+                  <div class="notificacoes-profile">
+                    <div class="info">
+                      <img src="./img/storys/pessoa6.jpg" alt="" />
+                      <div class="text">
+                        <p><a href="" class="profile">joao</a> começou a seguir você <span class="time"> 2 d</span></p>
+                      </div>
+                    </div>
+                    <button class="botao-padrao">Seguir</button>
+                  </div>
+                  <div class="notificacoes-profile">
+                    <div class="info">
+                      <img src="./img/publicacoes/pessoa1.jpg" alt="" />
+                      <div class="text">
+                        <p><a href="" class="profile">marina</a> curtiu seu story <span class="time"> 4 d</span></p>
+                      </div>
+                    </div>
+                    <a class="pub-ligada">
+                      <img src="./img/eu.jpeg" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="container">
+            <div class="storys-posts">
+              <div class="storys">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/storys/pessoa1.jpg" alt="" />
+                          </div>
+                          <p>julia</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/storys/pessoa3.jpg" alt="" />
+                          </div>
+                          <p>marcos</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/storys/pessoa2.jpg" alt="" />
+                          </div>
+                          <p>renata</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/storys/pessoa4.jpg" alt="" />
+                          </div>
+                          <p>jonatan</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/storys/pessoa5.jpg" alt="" />
+                          </div>
+                          <p>maria</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/storys/pessoa6.jpg" alt="" />
+                          </div>
+                          <p>joao</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/publicacoes/pessoa1.jpg" alt="" />
+                          </div>
+                          <p>marina</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/publicacoes/pessoa3.jpg" alt="" />
+                          </div>
+                          <p>ryan</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/publicacoes/pessoa4.jpg" alt="" />
+                          </div>
+                          <p>bruno</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/eu.jpeg" alt="" />
+                          </div>
+                          <p>vitucelio</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/eu.jpeg" alt="" />
+                          </div>
+                          <p>vitucelio</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/eu.jpeg" alt="" />
+                          </div>
+                          <p>vitucelio</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/eu.jpeg" alt="" />
+                          </div>
+                          <p>vitucelio</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/eu.jpeg" alt="" />
+                          </div>
+                          <p>vitucelio</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/eu.jpeg" alt="" />
+                          </div>
+                          <p>vitucelio</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/eu.jpeg" alt="" />
+                          </div>
+                          <p>vitucelio</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/eu.jpeg" alt="" />
+                          </div>
+                          <p>vitucelio</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/eu.jpeg" alt="" />
+                          </div>
+                          <p>vitucelio</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/eu.jpeg" alt="" />
+                          </div>
+                          <p>vitucelio</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/eu.jpeg" alt="" />
+                          </div>
+                          <p>vitucelio</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-slide">
+                      <button class="story">
+                        <div class="info">
+                          <div class="foto">
+                            <img src="./img/eu.jpeg" alt="" />
+                          </div>
+                          <p>vitucelio</p>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+              <div class="posts">
+                <div class="publicacao">
+                  <div class="conteudo-perfil">
+                    <div class="info-perfil">
+                      <div class="story-foto">
+                        <img src="./img/publicacoes/pessoa1.jpg" alt="" />
+                      </div>
+                      <a href="">marina</a>
+                      <span>• 23 min</span>
+                    </div>
+                    <button class="btn-3points">
+                      <i class="icon-3points"></i>
+                    </button>
+                  </div>
+                  <div class="conteudo-fotos">
+                    <div class="swiper carrossel">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="image" style="background-image: url(./img/publicacoes/pessoa2.jpg)"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="image" style="background-image: url(./img/publicacoes/pessoa1.jpg)"></div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="btn-like">
+                        <div class="like"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="conteudo-acoes">
+                    <div class="acoes">
+                      <div class="likes">
+                        <ul>
+                          <li>
+                            <button class="btn-curtir-publicacao">
+                              <i class="icon-curtir"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="btn-comentar-publicacao">
+                              <i class="icon-comentario"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="btn-compartilhar-publicacao">
+                              <i class="icon-compartilhar"></i>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="saves">
+                        <button class="btn-salvar-publicacao">
+                          <i class="icon-salvar"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="descricao">
+                      <p>
+                        Curtido por <span>julia</span> e
+                        <span>outras 3.548 pessoas</span>
+                      </p>
+                      <p><span>marina</span> ❤️</p>
+                      <strong>Ver tradução</strong>
+                      <button type="button" class="btn-ver-comentarios">Ver todos os 12 comentários</button>
+                    </div>
+                    <div class="comentario">
+                      <input type="text" placeholder="Adicione um comentário..." />
+                      <button><img src="./img/comentario.svg" alt="" /></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="publicacao">
+                  <div class="conteudo-perfil">
+                    <div class="info-perfil">
+                      <div class="story-foto">
+                        <img src="./img/publicacoes/pessoa3.jpg" alt="" />
+                      </div>
+                      <a href="">ryan</a>
+                      <span>• 2 d</span>
+                    </div>
+                    <button class="btn-3points">
+                      <i class="icon-3points"></i>
+                    </button>
+                  </div>
+                  <div class="conteudo-fotos">
+                    <div class="swiper carrossel">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="image" style="background-image: url(./img/publicacoes/pessoa3.jpg)"></div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="btn-like">
+                        <div class="like"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="conteudo-acoes">
+                    <div class="acoes">
+                      <div class="likes">
+                        <ul>
+                          <li>
+                            <button class="btn-curtir-publicacao">
+                              <i class="icon-curtir"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="btn-comentar-publicacao">
+                              <i class="icon-comentario"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="btn-compartilhar-publicacao">
+                              <i class="icon-compartilhar"></i>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="saves">
+                        <button class="btn-salvar-publicacao">
+                          <i class="icon-salvar"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="descricao">
+                      <p>
+                        Curtido por <span>renata</span> e
+                        <span>outras 1.989 pessoas</span>
+                      </p>
+                      <p><span>ryan</span> Quebre o ciclo.</p>
+                      <strong>Ver tradução</strong>
+                      <button type="button" class="btn-ver-comentarios">Ver todos os 12 comentários</button>
+                    </div>
+                    <div class="comentario">
+                      <input type="text" placeholder="Adicione um comentário..." />
+                      <button><img src="./img/comentario.svg" alt="" /></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="publicacao">
+                  <div class="conteudo-perfil">
+                    <div class="info-perfil">
+                      <div class="story-foto">
+                        <img src="./img/publicacoes/pessoa5.jpg" alt="" />
+                      </div>
+                      <a href="">bruno</a>
+                      <span>• 2 d</span>
+                    </div>
+                    <button class="btn-3points">
+                      <i class="icon-3points"></i>
+                    </button>
+                  </div>
+                  <div class="conteudo-fotos">
+                    <div class="swiper carrossel">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="image" style="background-image: url(./img/publicacoes/pessoa6.jpg)"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="image" style="background-image: url(./img/publicacoes/pessoa5.jpg)"></div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="btn-like">
+                        <div class="like"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="conteudo-acoes">
+                    <div class="acoes">
+                      <div class="likes">
+                        <ul>
+                          <li>
+                            <button class="btn-curtir-publicacao">
+                              <i class="icon-curtir"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="btn-comentar-publicacao">
+                              <i class="icon-comentario"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="btn-compartilhar-publicacao">
+                              <i class="icon-compartilhar"></i>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="saves">
+                        <button class="btn-salvar-publicacao">
+                          <i class="icon-salvar"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="descricao">
+                      <p>
+                        Curtido por <span>maria</span> e
+                        <span>outras 375 pessoas</span>
+                      </p>
+                      <p><span>bruno</span> transforme sua profissão em um negócio.</p>
+                      <strong>Ver tradução</strong>
+                      <button type="button" class="btn-ver-comentarios">Ver todos os 12 comentários</button>
+                    </div>
+                    <div class="comentario">
+                      <input type="text" placeholder="Adicione um comentário..." />
+                      <button><img src="./img/comentario.svg" alt="" /></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sugestoes">
+              <div class="perfil">
+                <div class="foto-info">
+                  <button class="foto">
+                    <img src="./img/eu.jpeg" alt="" />
+                  </button>
+                  <div class="info">
+                    <p>vitucelio</p>
+                    <h4>Vítor Célio</h4>
+                  </div>
+                </div>
+                <button type="button" class="btn-seguir-mudar">Mudar</button>
+              </div>
+              <div class="sugestoes-voce">
+                <div class="ver-tudo">
+                  <h5>Sugestões para você</h5>
+                  <a href="" class="btn-seguir">Ver tudo</a>
+                </div>
+                <div class="sugestao-pessoas">
+                  <div class="pessoa">
+                    <div class="foto-info">
+                      <img src="./img/sugestoes/pessoa1.jpg" alt="" />
+                      <div class="info">
+                        <h6>henrique</h6>
+                        <p>Seguido(a) por joao e mais</p>
+                      </div>
+                    </div>
+                    <button class="btn-seguir">Seguir</button>
+                  </div>
+                  <div class="pessoa">
+                    <div class="foto-info">
+                      <img src="./img/sugestoes/pessoa2.jpg" alt="" />
+                      <div class="info">
+                        <h6>mario</h6>
+                        <p>Seguido(a) por renata e mais</p>
+                      </div>
+                    </div>
+                    <button class="btn-seguir">Seguir</button>
+                  </div>
+                  <div class="pessoa">
+                    <div class="foto-info">
+                      <img src="./img/sugestoes/pessoa3.jpg" alt="" />
+                      <div class="info">
+                        <h6>morgana</h6>
+                        <p>Seguido(a) por marcos e mais</p>
+                      </div>
+                    </div>
+                    <button class="btn-seguir">Seguir</button>
+                  </div>
+                  <div class="pessoa">
+                    <div class="foto-info">
+                      <img src="./img/sugestoes/pessoa4.jpg" alt="" />
+                      <div class="info">
+                        <h6>pedro</h6>
+                        <p>Seguido(a) por maria e mais</p>
+                      </div>
+                    </div>
+                    <button class="btn-seguir">Seguir</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="menu-mobile">
+        <div class="menu">
+          <nav>
+            <ul>
+              <li>
+                <a href="" class="btn-menu ativa">
+                  <i class="icon-home"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" class="btn-menu">
+                  <i class="icon-explore"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" class="btn-menu">
+                  <i class="icon-reels"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" class="btn-menu">
+                  <i class="icon-criar"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" class="btn-menu">
+                  <i class="icon-messenger"></i>
+                  <small>2</small>
+                </a>
+              </li>
+              <li>
+                <a href="" class="btn-menu">
+                  <img src="./img/eu.jpeg" alt="" width="24" height="24" class="perfil" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+
+      <section class="publicacao-dialog" id="publicacao-dialog">
+        <div class="publicacao-area">
+          <fieldset class="publicacao-detalhe">
+            <div class="publicacao-media">
+              <div class="swiper carrosselDialog">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="image" style="background-image: url(./img/publicacoes/pessoa2.jpg)"></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="image" style="background-image: url(./img/publicacoes/pessoa1.jpg)"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div id="btn-like">
+                  <div class="like"></div>
+                </div>
+              </div>
+            </div>
+            <div class="publicacao-info">
+              <div class="conteudo-perfil">
+                <div class="info-perfil">
+                  <div class="story-foto">
+                    <img src="./img/publicacoes/pessoa1.jpg" alt="" />
+                  </div>
+                  <a href="">marina</a>
+                </div>
+                <button class="btn-3points"><i class="icon-3points"></i></button>
+              </div>
+              <div class="conteudo-comentarios">
+                <div class="comentario-post">
+                  <div class="comentario-principal">
+                    <div class="story-foto">
+                      <img src="./img/publicacoes/pessoa1.jpg" alt="" />
+                    </div>
+                    <div class="comentario-info">
+                      <p>
+                        <span><a href="">marina</a></span> ❤️
+                      </p>
+                      <div class="acoes-comentario">
+                        <div class="acoes-comentario-info">
+                          <span>23 min</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="comentario-post" id="comentario-post">
+                  <div class="comentario-principal">
+                    <div class="story-foto desativado">
+                      <img src="./img/storys/pessoa6.jpg" alt="" />
+                    </div>
+                    <div class="comentario-info">
+                      <p>
+                        <span><a href="">joao</a></span> 🤞🤞🤞
+                      </p>
+                      <div class="acoes-comentario">
+                        <div class="acoes-comentario-info">
+                          <span>10 min</span>
+                          <span>2 curtidas</span>
+                          <button>Responder</button>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-curtir-comentario"><i class="icon-coracao-comentario"></i></button>
+                  </div>
+                  <div class="comentarios-respostas">
+                    <button class="btn-ver-resposta">Ver resposta (2)</button>
+                    <div class="respostas">
+                      <div class="comentario-post">
+                        <div class="comentario-principal">
+                          <div class="story-foto desativado">
+                            <img src="./img/storys/pessoa1.jpg" alt="" />
+                          </div>
+                          <div class="comentario-info">
+                            <p>
+                              <span><a href="">julia</a></span> 💕
+                            </p>
+                            <div class="acoes-comentario">
+                              <div class="acoes-comentario-info">
+                                <span>5 min</span>
+                                <span>1 curtidas</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btn-curtir-comentario"><i class="icon-coracao-comentario"></i></button>
+                        </div>
+                      </div>
+                      <div class="comentario-post">
+                        <div class="comentario-principal">
+                          <div class="story-foto desativado">
+                            <img src="./img/eu.jpeg" alt="" />
+                          </div>
+                          <div class="comentario-info">
+                            <p>
+                              <span><a href="">vitucelio</a></span> ✌️✌️.
+                            </p>
+                            <div class="acoes-comentario">
+                              <div class="acoes-comentario-info">
+                                <span>2 min</span>
+                                <span> curtidas</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btn-curtir-comentario"><i class="icon-coracao-comentario"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comentario-post">
+                  <div class="comentario-principal">
+                    <div class="story-foto desativado">
+                      <img src="./img/storys/pessoa1.jpg" alt="" />
+                    </div>
+                    <div class="comentario-info">
+                      <p>
+                        <span><a href="">julia</a></span> 😘🙌
+                      </p>
+                      <div class="acoes-comentario">
+                        <div class="acoes-comentario-info">
+                          <span>20 min</span>
+                          <span>11 curtidas</span>
+                          <button>Responder</button>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-curtir-comentario"><i class="icon-coracao-comentario"></i></button>
+                  </div>
+                  <div class="comentarios-respostas">
+                    <button class="btn-ver-resposta">Ver resposta (1)</button>
+                    <div class="respostas">
+                      <div class="comentario-post">
+                        <div class="comentario-principal">
+                          <div class="story-foto desativado">
+                            <img src="./img/publicacoes/pessoa1.jpg" alt="" />
+                          </div>
+                          <div class="comentario-info">
+                            <p>
+                              <span><a href="">marina</a></span> obg.
+                            </p>
+                            <div class="acoes-comentario">
+                              <div class="acoes-comentario-info">
+                                <span>23 min</span>
+                                <span>11 curtidas</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btn-curtir-comentario"><i class="icon-coracao-comentario"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="conteudo-acoes">
+                <div class="acoes">
+                  <div class="likes">
+                    <ul>
+                      <li>
+                        <button id="btn-curtir-detalhe">
+                          <i class="icon-curtir"></i>
+                        </button>
+                      </li>
+                      <li>
+                        <button id="btn-comentar-detalhe">
+                          <i class="icon-comentario"></i>
+                        </button>
+                      </li>
+                      <li>
+                        <button id="btn-compartilhar-detalhe">
+                          <i class="icon-compartilhar"></i>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="saves">
+                    <button id="btn-salvar-detalhe">
+                      <i class="icon-salvar"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="descricao">
+                  <p>
+                    Curtido por <span>julia</span> e
+                    <span>outras 3.548 pessoas</span>
+                  </p>
+                  <small>Há 23 min</small>
+                </div>
+                <div class="comentario">
+                  <i class="icon-emoji-comentario"></i>
+                  <input type="text" placeholder="Adicione um comentário..." id="input-comentario-detalhe" />
+                  <button type="button">Publicar</button>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="btn-fechar" id="fechar-publicacao-dialog">
+          <i class="icon-fechar"></i>
+        </button>
+      </section>
+
+      <section class="story-pagina" id="story-pagina" style="transform: scale(0)">
+        <div class="story-area" id="story-area">
+          <div class="logo">
+            <a href="home.html"><img src="./img/logo-insta-branca.svg" alt="" /></a>
+          </div>
+          <div class="storys-postagens">
+            <div class="swiper storySwiper">
+              <div class="swiper-wrapper"></div>
+            </div>
+          </div>
+          <div class="btn-close" onclick="abrirStories()">
+            <button><i class="icon-fechar"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="tres-pontos-pagina" id="tres-pontos-pagina" style="display: none">
+        <div class="tres-pontos-area">
+          <div class="acoes-publicacao" style="transform: scale(0)">
+            <button class="alert">Deixar de seguir</button>
+            <button>Ir para a publicação</button>
+            <button>Copiar link</button>
+            <button type="button" onclick="cancelarBtn3PontosPublicacoes();">Cancelar</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="compartilhamento-pagina" id="compartilhamento-pagina" style="display: none">
+        <div class="compartilhamento-area">
+          <div class="acoes-compartilhamento" style="transform: scale(0)">
+            <header>
+              <div></div>
+              <h3>Compartilhamento</h3>
+              <button type="button" onclick="cancelarCompartilhamento()">
+                <i class="icon-fechar-dialog"></i>
+              </button>
+            </header>
+            <main>
+              <div class="compartilhar-para">
+                <div class="para">
+                  <span>Para:</span>
+                </div>
+                <div class="perfis-busca">
+                  <div class="perfis-selecionados"></div>
+                  <input type="text" name="" id="pesquisar-compartilhar" placeholder="Pesquisar..." />
+                </div>
+              </div>
+
+              <div class="sugestoes-perfis">
+                <span>Sugestões</span>
+                <div class="perfis-para-selecao"></div>
+              </div>
+            </main>
+            <footer>
+              <div class="mensagem-compartilhar" id="mensagem-compartilhar">
+                <input type="text" placeholder="Escreva uma mensagem..." />
+              </div>
+              <div class="btn-enviar-mensagem"><button id="btn-enviar-mensagem" disabled type="button">Enviar</button></div>
+            </footer>
+          </div>
+        </div>
+      </section>
+
+      <section class="criar-publicacao" id="criar-publicacao" style="display: none">
+        <div class="criar-publicacao-area">
+          <div class="acoes-criar-publicacao" id="acoes-criar-publicacao" style="transform: scale(0)">
+            <header>
+              <button class="btn-fechar-criar-publicacao" id="btn-voltar-criar-publicacao">
+                <img src="./img/seta-voltar.svg" alt="" />
+              </button>
+              <h4 class="text-criar-publicacao">Criar nova publicação</h4>
+              <button class="btn-seguir-mudar" id="btn-compartilhar-publicacao">Compartilhar</button>
+            </header>
+            <main id="main-criar-publicacao">
+              <div class="selecione" id="selecione">
+                <img src="./img/criar-publicacao.svg" alt="" />
+                <h5>Arraste as fotos e os vídeos aqui</h5>
+                <label for="criar-publicacao-input" class="botao-padrao-criar">Selecionar do computador</label>
+                <input
+                  multiple
+                  accept=".jpg, .jpeg, .png"
+                  type="file"
+                  name="criar-publicacao-input"
+                  id="criar-publicacao-input"
+                  onchange="compartilharPublicacao()"
+                />
+              </div>
+              <div class="compartilhar" id="compartilhar" style="display: none">
+                <div class="imagem-publicacao">
+                  <div class="swiper carrossel-compartilhar">
+                    <div class="swiper-wrapper"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                </div>
+                <div class="detalhes-compartilhar">
+                  <div class="legenda">
+                    <div class="perfil">
+                      <img src="./img/eu.jpeg" alt="" />
+                      <span>vitucelio</span>
+                    </div>
+                    <textarea maxlength="2200" name="" id="legenda-criar-publicacao" placeholder="Escreva uma legenda..."></textarea>
+                    <div class="emoji">
+                      <button><img src="./img/comentario.svg" alt="" /></button>
+                      <div class="contagem-caractere" id="contagem-caractere">
+                        <span>0/2200</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="localizacao">
+                    <input type="text" name="" id="add-localizacao" placeholder="Adicionar localização" />
+                    <img src="./img/localizacao.svg" alt="localizacao" />
+                  </div>
+                  <div class="config-avancadas">
+                    <button type="button" id="btn-config-avancadas">
+                      <span>Configurações avançadas</span>
+                      <i class="icon-seta-baixo"></i>
+                    </button>
+                    <div class="config-ativar" id="config-area" style="display: none">
+                      <div>
+                        <div class="titulo">
+                          <h5>Ocultar o número de curtidas e visualizações dessa publicação</h5>
+                          <div class="btn-decisao-checkbox">
+                            <label for="btn-curtidas" class="btn-decisao botao-checkbox">
+                              <span></span>
+                            </label>
+                            <input type="checkbox" name="" id="btn-curtidas" />
+                          </div>
+                        </div>
+                        <p>
+                          Só você verá o número total de curtidas e de visualizações dessa publicação. Para alterar isso mais tarde, vá para o menu ··· na parte
+                          superior da publicação. Para ocultar o número de curtidas nas publicações de outras pessoas, vá para as configurações da sua conta.
+                        </p>
+                      </div>
+                      <div>
+                        <div class="titulo">
+                          <h5>Desativar comentários</h5>
+                          <div class="btn-decisao-checkbox">
+                            <label for="btn-comentarios" class="btn-decisao botao-checkbox">
+                              <span></span>
+                            </label>
+                            <input type="checkbox" name="" id="btn-comentarios" />
+                          </div>
+                        </div>
+                        <p>Você pode alterar isso mais tarde acessando o menu ··· no topo da sua publicação.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+          <button class="btn-fechar" id="fechar-criar-publicacao">
+            <i class="icon-fechar"></i>
+          </button>
+        </div>
+      </section>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/publicacao.js"></script>
+    <script src="./js/storys.js"></script>
+    <script>
+      var body = document.getElementsByTagName("body")[0];
+
+      function abrirStories() {
+        var storyPagina = document.getElementById("story-pagina");
+        if (storyPagina.style.transform == "scale(1)") {
+          storyPagina.style.transform = "scale(0)";
+          body.style.overflow = "auto";
+          initSwiper();
+        } else {
+          storyPagina.style.transform = "scale(1)";
+          body.style.overflow = "hidden";
+        }
+      }
+
+      var swiperBotoesStorys = new Swiper(".mySwiper", {
+        slidesPerView: 8,
+        slidesPerGroup: 8,
+        slidesPerGroupSkip: 0,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          click: function () {
+            var divSwiperWrapper = swiperStorysAbertos.el;
+            var swiperAtivo = swiperStorysAbertos.slides[this.clickedIndex];
+            var indexClick;
+            ativarSequenciaStory(divSwiperWrapper, swiperAtivo, this.clickedIndex, true);
+            abrirStories();
+          },
+        },
+      });
+
+      var swiperPublicacoes = new Swiper(".publicacao .conteudo-fotos .carrossel", {
+        spaceBetween: 0,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var swiperPublicacoes = new Swiper(".publicacao-dialog .publicacao-area .publicacao-detalhe .publicacao-media .carrosselDialog", {
+        spaceBetween: 0,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var swiperPublicacoes = new Swiper(".carrossel-compartilhar", {
+        spaceBetween: 0,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

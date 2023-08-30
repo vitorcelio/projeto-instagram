@@ -1,0 +1,1413 @@
+.input-form {
+  width: 100%;
+  background-color: $input;
+  border: 1px solid $border-gray;
+  border-radius: 3px;
+  height: 36px;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+
+.botao-padrao,
+.botao-padrao-criar {
+  cursor: pointer;
+  padding: 0.7rem;
+  line-height: 1.8rem;
+  border-radius: 0.8rem;
+  background-color: $blue;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $white;
+
+  &-ativo {
+    cursor: pointer;
+    background-color: $btn-ativo;
+    padding: 0.7rem 1.6rem;
+    line-height: 1.8rem;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $black;
+  }
+}
+
+.btn-menu {
+  position: relative;
+  padding: 1.2rem;
+  display: block;
+  border-radius: 0.8rem;
+  @include display-flex(initial, center, row);
+
+  i {
+    transition: all 0.3s;
+  }
+
+  img {
+    transition: all 0.3s;
+
+    &.perfil {
+      border-radius: 5rem;
+
+      &-ativo {
+        border-radius: 5rem;
+        border: 0.2rem solid $black;
+      }
+    }
+  }
+
+  span {
+    margin-left: 1.6rem;
+    font-size: 1.6rem;
+    color: $black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  small {
+    width: 19.6px;
+    height: 19.6px;
+    padding: 0.9rem;
+    border-radius: 5rem;
+    position: absolute;
+    top: 0.2rem;
+    left: 2.34rem;
+    background-color: $red;
+    border: 0.2rem solid $white;
+    @include display-flex(center, center, row);
+    font-size: 1.1rem;
+    color: $white;
+  }
+
+  &:hover {
+    background-color: #f2f2f2;
+    i,
+    img {
+      transform: scale(1.05);
+    }
+  }
+
+  &.ativa {
+    font-weight: 700;
+  }
+}
+
+.publicacao {
+  width: 100%;
+  max-width: 47rem;
+  border-bottom: 0.1rem solid $borda-linhas;
+
+  .conteudo-perfil {
+    width: 100%;
+    height: 4.8rem;
+    background-color: $white;
+    border-radius: 0.8rem;
+    @include display-flex(space-between, center, row);
+
+    .info-perfil {
+      @include display-flex(initial, center, row);
+
+      .story-foto {
+        margin-right: 0.7rem;
+        @include story-foto(3.9rem);
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      a {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-right: 0.932rem;
+        color: $color-name-perfil;
+      }
+
+      span {
+        color: $gray;
+        font-size: 1.4rem;
+      }
+    }
+
+    button {
+      cursor: pointer;
+    }
+  }
+
+  .conteudo-fotos {
+    height: 50rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    border: 0.1rem solid $borda-linhas;
+
+    .carrossel {
+      .image {
+        width: 100%;
+        height: 50rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .swiper-pagination-bullet {
+        background: $white;
+        opacity: 0.4;
+
+        &-active {
+          opacity: 1;
+        }
+      }
+
+      .swiper-button-next {
+        &::after {
+          content: "";
+          width: 4rem;
+          height: 4rem;
+          background-image: url(../img/btn-next.svg);
+          background-repeat: no-repeat;
+        }
+
+        &.swiper-button-disabled {
+          display: none;
+        }
+      }
+
+      .swiper-button-prev {
+        &::after {
+          content: "";
+          width: 4rem;
+          height: 4rem;
+          background-image: url(../img/btn-prev.svg);
+          background-repeat: no-repeat;
+        }
+
+        &.swiper-button-disabled {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .conteudo-acoes {
+    background-color: $white;
+    padding-top: 1.4rem;
+    border-radius: 0.8rem;
+
+    .acoes {
+      width: 100%;
+      @include display-flex(space-between, center, row);
+      margin-bottom: 1.5rem;
+
+      button {
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.4;
+        }
+      }
+
+      .likes {
+        ul {
+          @include display-flex(initial, center, row);
+          gap: 1.8rem;
+        }
+      }
+    }
+
+    .descricao {
+      width: 100%;
+      @include display-flex(initial, flex-start, column);
+      gap: 0.6rem;
+
+      p {
+        font-size: 1.4rem;
+
+        span {
+          font-weight: 600;
+        }
+      }
+
+      strong {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      button {
+        cursor: pointer;
+        font-size: 1.3rem;
+        color: $gray;
+        margin-bottom: 0.88rem;
+      }
+    }
+
+    .comentario {
+      width: 100%;
+      height: 3rem;
+      @include display-flex(space-between, center, row);
+      gap: 1.65rem;
+
+      input {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        font-size: 1.4rem;
+        &::placeholder {
+          color: $gray;
+        }
+      }
+
+      button {
+        cursor: pointer;
+
+        img {
+          width: 1.4rem;
+          height: 1.4rem;
+        }
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  @include responsive(640px) {
+    margin-bottom: 4.9rem;
+
+    .conteudo-perfil {
+      padding: 0.5rem;
+    }
+
+    .conteudo-acoes {
+      padding: 1.6rem;
+    }
+  }
+}
+
+@keyframes animationLike {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  15% {
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+
+  30% {
+    transform: scale(0.95);
+  }
+
+  45%,
+  80% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.heart-like {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  @include display-flex(center, center, row);
+
+  .like {
+    animation: animationLike 1000ms ease-in-out;
+    background-image: url(../img/curtida-tela.svg);
+    width: 10rem;
+    height: 10rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.btn-seguir {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $blue;
+
+  &-seguindo {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $black;
+  }
+
+  &-mudar,
+  &-recentes {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $blue;
+  }
+}
+
+.area-ativa {
+  .left {
+    max-width: 7.4rem !important;
+
+    .menu {
+      max-width: 7.4rem !important;
+
+      .logo {
+        max-width: 2.9rem !important;
+        background-image: url(../img/logo-insta-mini.svg) !important;
+      }
+
+      nav {
+        ul {
+          width: auto !important;
+
+          li {
+            width: auto !important;
+
+            .btn-menu {
+              span {
+                &:not(&.alert) {
+                  display: none;
+                }
+              }
+
+              .notificacao-alerta {
+                right: -6.5rem !important;
+              }
+            }
+          }
+        }
+
+        .btn-mais {
+          .btn-menu {
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.input-pesquisar {
+  padding: 0 1.6rem;
+  @include display-flex(initial, center, row);
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 26.8rem;
+  height: 3.6rem;
+  background-color: #efefef;
+  border-radius: 0.8rem;
+
+  input {
+    width: 100%;
+    font-size: 1.6rem;
+
+    &::placeholder {
+      font-weight: 200;
+    }
+  }
+}
+
+.comentario-post {
+  width: 100%;
+  gap: 1.9rem;
+  @include display-flex(initial, flex-start, column);
+
+  .comentario-principal {
+    width: 100%;
+    gap: 0.7rem;
+    @include display-flex(initial, flex-start, row);
+
+    .story-foto {
+      @include story-foto(3.9rem);
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .comentario-info {
+      @include display-flex(initial, flex-start, column);
+      gap: 0.8rem;
+      width: 100%;
+
+      p {
+        font-size: 1.4rem;
+
+        span,
+        a {
+          font-weight: 600;
+          color: $black;
+        }
+      }
+
+      .acoes-comentario {
+        @include display-flex(initial, flex-start, column);
+        gap: 1.9rem;
+
+        .acoes-comentario-info {
+          @include display-flex(initial, center, row);
+          gap: 1.2rem;
+          span,
+          button {
+            font-size: 1.2rem;
+            color: $gray;
+            font-weight: 500;
+          }
+        }
+      }
+
+      button {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .comentarios-respostas {
+    width: 100%;
+    margin-left: 4rem;
+    @include display-flex(flex-start, flex-start, column);
+    gap: 2.2rem;
+
+    .btn-ver-resposta {
+      cursor: pointer;
+      position: relative;
+      font-size: 1.2rem;
+      color: $gray;
+      font-weight: 500;
+      margin-left: 4rem;
+
+      &::before {
+        bottom: 50%;
+        content: "";
+        width: 2.4rem;
+        height: 0.08rem;
+        left: -4rem;
+        background-color: $gray;
+        position: absolute;
+      }
+    }
+
+    .respostas {
+      width: calc(100% - 4rem);
+      @include display-flex(flex-start, flex-start, column);
+      gap: 1.2rem;
+      display: none;
+    }
+  }
+}
+
+.publicacao-dialog {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: none;
+
+  .btn-fechar {
+    top: 0;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    @include display-flex(flex-end, flex-start, row);
+
+    .icon-fechar {
+      margin: 1.8rem;
+    }
+  }
+
+  .publicacao-area {
+    width: 100%;
+    height: 100%;
+    @include display-flex(center, center, row-reverse);
+
+    .publicacao-detalhe {
+      padding: 0 2rem;
+      width: 100%;
+      max-width: calc(100% - 64px - 64px);
+      height: calc(100vh - 40px);
+      border-radius: 0.4rem;
+      @include display-flex(center, initial, row);
+      transition: all 0.5s;
+
+      .publicacao-media {
+        width: 100%;
+        max-width: 55.8rem;
+        min-width: 22.6rem;
+        height: 100%;
+        background-color: $white;
+        border-top-left-radius: 0.4rem;
+        border-bottom-left-radius: 0.4rem;
+
+        .carrosselDialog {
+          height: 100%;
+
+          .image {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-top-left-radius: 0.4rem;
+            border-bottom-left-radius: 0.4rem;
+          }
+
+          .swiper-button-next {
+            &::after {
+              content: "";
+              width: 4rem;
+              height: 4rem;
+              background-image: url(../img/btn-next.svg);
+              background-repeat: no-repeat;
+            }
+
+            &.swiper-button-disabled {
+              display: none;
+            }
+          }
+
+          .swiper-button-prev {
+            &::after {
+              content: "";
+              width: 4rem;
+              height: 4rem;
+              background-image: url(../img/btn-prev.svg);
+              background-repeat: no-repeat;
+            }
+
+            &.swiper-button-disabled {
+              display: none;
+            }
+          }
+        }
+
+        .swiper-pagination-bullet {
+          background: $white;
+          opacity: 0.4;
+
+          &-active {
+            opacity: 1;
+          }
+        }
+      }
+
+      .publicacao-info {
+        overflow: hidden;
+        background-color: $white;
+        width: 100%;
+        max-width: 50rem;
+        min-width: 40.5rem;
+        height: 100%;
+        border-top-right-radius: 0.4rem;
+        border-bottom-right-radius: 0.4rem;
+        @include display-flex(space-between, initial, column);
+
+        .conteudo-perfil {
+          width: 100%;
+          background-color: $white;
+          border-top-right-radius: 0.4rem;
+          padding: 1.3rem 1.7rem;
+          border-bottom: 0.1rem solid $border-gray;
+          @include display-flex(space-between, center, row);
+
+          .info-perfil {
+            @include display-flex(initial, center, row);
+
+            .story-foto {
+              margin-right: 0.7rem;
+              @include story-foto(3.9rem);
+
+              img {
+                object-fit: cover;
+              }
+            }
+
+            a {
+              font-size: 1.4rem;
+              font-weight: 600;
+              margin-right: 0.932rem;
+              color: $color-name-perfil;
+            }
+
+            span {
+              color: $gray;
+              font-size: 1.4rem;
+            }
+          }
+
+          button {
+            cursor: pointer;
+          }
+        }
+
+        .conteudo-comentarios {
+          flex: 1;
+          overflow-y: scroll;
+          height: 40rem;
+          padding: 1.3rem 1.7rem;
+          @include display-flex(flex-start, flex-start, column);
+          gap: 2.4rem;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
+        .conteudo-acoes {
+          border-top: 0.1rem solid $border-gray;
+          background-color: $white;
+          @include display-flex(space-between, initial, column);
+
+          .acoes {
+            padding-top: 1.7rem;
+            padding-right: 1.7rem;
+            padding-left: 1.7rem;
+            width: 100%;
+            @include display-flex(space-between, center, row);
+            margin-bottom: 1.5rem;
+
+            button {
+              cursor: pointer;
+
+              &:hover {
+                opacity: 0.4;
+              }
+            }
+
+            .likes {
+              ul {
+                @include display-flex(initial, center, row);
+                gap: 1.8rem;
+              }
+            }
+          }
+
+          .descricao {
+            padding-right: 1.7rem;
+            padding-left: 1.7rem;
+            width: 100%;
+            @include display-flex(initial, flex-start, column);
+            gap: 0.6rem;
+
+            p {
+              font-size: 1.4rem;
+
+              span {
+                font-weight: 600;
+              }
+            }
+
+            small {
+              font-size: 1.1rem;
+              color: $gray;
+            }
+          }
+
+          .comentario {
+            padding: 0 1.7rem;
+            border-top: 0.1rem solid $border-gray;
+            height: 5.3rem;
+            margin-top: 1.3rem;
+            width: 100%;
+            @include display-flex(space-between, center, row);
+            gap: 1.65rem;
+
+            input {
+              flex: 1;
+              width: 100%;
+              height: 100%;
+              font-size: 1.4rem;
+              &::placeholder {
+                color: $gray;
+              }
+            }
+
+            button {
+              font-size: 1.4rem;
+              font-weight: 600;
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(1144px) {
+    .publicacao-area {
+      .publicacao-detalhe {
+        max-height: 59rem;
+      }
+    }
+  }
+
+  @include responsive(999px) {
+    .publicacao-area {
+      .publicacao-detalhe {
+        max-height: 45rem;
+      }
+    }
+  }
+
+  @include responsive(730px) {
+    .publicacao-area {
+      height: 100%;
+      max-height: 100vh;
+      width: 100%;
+      max-width: 100%;
+
+      .publicacao-detalhe {
+        height: 100%;
+        max-height: 100%;
+        padding: 0;
+        max-width: 100%;
+        border-radius: 0;
+
+        .publicacao-media {
+          display: none;
+        }
+
+        .publicacao-info {
+          max-width: 100%;
+          min-width: 100%;
+          border-radius: 0;
+        }
+      }
+    }
+
+    .btn-fechar {
+      display: none;
+    }
+  }
+}
+
+.amigos-p {
+  padding: 0.7rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: $white;
+  font-weight: 500;
+  background-color: $amigos-p;
+  border-radius: 0.4rem;
+}
+
+.tres-pontos-pagina {
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  .tres-pontos-area {
+    width: 100%;
+    height: 100%;
+    @include display-flex(center, center, row);
+
+    .acoes-publicacao {
+      @include display-flex(center, initial, column);
+      background-color: $white;
+      width: 100%;
+      max-width: 40rem;
+      border-radius: 1.2rem;
+      transition: transform 0.2s;
+
+      button {
+        cursor: pointer;
+        border-bottom: 0.1rem solid #dbdbdb;
+        line-height: 2.1rem;
+        font-weight: 400;
+        font-size: 1.3rem;
+        padding: 1.37rem 0;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &.alert {
+          color: #ed4956;
+          font-size: 1.4rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.compartilhamento-pagina {
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  .compartilhamento-area {
+    width: 100%;
+    height: 100%;
+    @include display-flex(center, center, row);
+
+    .acoes-compartilhamento {
+      width: 100%;
+      max-width: 54.8rem;
+      background-color: $white;
+      border-radius: 1.2rem;
+      @include display-flex(space-between, initial, column);
+      transition: transform 0.2s;
+
+      header {
+        @include display-flex(space-between, center, row);
+        padding: 1.25rem 2.4rem;
+        border-bottom: 0.1rem solid $borda-linhas;
+
+        h3 {
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 2rem;
+        }
+
+        button {
+          cursor: pointer;
+        }
+      }
+
+      main {
+        height: 100%;
+        max-height: 39rem;
+        flex: 1;
+        @include display-flex(space-between, initial, column);
+
+        .compartilhar-para {
+          @include display-flex(flex-start, flex-start, row);
+          padding: 1rem 1.6rem;
+          border-bottom: 0.1rem solid $borda-linhas;
+          height: 100%;
+          flex-shrink: 0;
+          overflow-y: scroll;
+          max-height: 12rem;
+
+          .para {
+            align-self: flex-start;
+            color: $black;
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 2rem;
+          }
+
+          .perfis-busca {
+            @include display-flex(flex-start, center, row);
+            padding: 0 0.4rem;
+            flex-wrap: wrap;
+
+            .perfis-selecionados {
+              @include display-flex(flex-start, flex-start, row);
+              gap: 0.8rem;
+              flex-wrap: wrap;
+
+              .perfil-para-enviar {
+                @include display-flex(center, center, row);
+                gap: 0.79rem;
+                height: 2.6rem;
+                background-color: #e0f1ff;
+                padding: 0 1.2rem;
+                border-radius: 1.2rem;
+                flex-shrink: 0;
+
+                h4 {
+                  color: #0095f6;
+                  text-align: center;
+                  font-size: 1.4rem;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 1.8rem;
+                }
+
+                button {
+                  cursor: pointer;
+                  padding: 0.7rem 0;
+                }
+              }
+            }
+
+            input {
+              color: $black;
+              padding: 0 1rem;
+              font-size: 1.4rem;
+              padding-top: 0.4rem;
+
+              &::placeholder {
+                color: $gray;
+              }
+            }
+          }
+        }
+
+        .sugestoes-perfis {
+          height: 100%;
+          //          max-height: 29.7rem;
+          overflow-y: scroll;
+
+          > span {
+            display: block;
+            padding: 1.32rem 1.6rem 1.18rem 1.6rem;
+            color: $black;
+            font-size: 1.3rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.8rem;
+          }
+
+          .perfis-para-selecao {
+            height: 100%;
+
+            .perfil-para-selecionar {
+              width: 100%;
+              padding: 0.8rem 1.6rem;
+              @include display-flex(space-between, center, row);
+
+              .foto-info {
+                @include display-flex(initial, center, row);
+                gap: 1.2rem;
+
+                .foto {
+                  cursor: pointer;
+
+                  img {
+                    width: 4.4rem;
+                    height: 4.4rem;
+                    object-fit: cover;
+                    border-radius: 5rem;
+                  }
+                }
+
+                .info {
+                  p {
+                    font-size: 1.3rem;
+                    line-height: 1.8rem;
+                    font-weight: 400;
+                    color: $gray;
+                  }
+
+                  h4 {
+                    font-size: 1.3rem;
+                    line-height: 1.8rem;
+                    color: $black;
+                    font-weight: 400;
+                  }
+                }
+              }
+
+              .btn-seleciona-perfil {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+
+      footer {
+        border-top: 0.1rem solid $borda-linhas;
+        width: 100%;
+
+        .mensagem-compartilhar {
+          margin-bottom: -3.2rem;
+          padding: 1.6rem;
+          transition: margin-bottom 0.2s;
+
+          input {
+            padding: 0 0.2rem;
+            width: 100%;
+            line-height: 1.6rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+          }
+        }
+
+        .btn-enviar-mensagem {
+          margin: 0 1.6rem;
+          margin-bottom: 1.6rem;
+
+          button {
+            cursor: pointer;
+            color: $white;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.8rem; /* 128.571% */
+            width: 100%;
+            padding: 0.78rem 0;
+            border-radius: 0.8rem;
+            background-color: $blue;
+
+            &:disabled {
+              background-color: #b2dffc;
+              cursor: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.criar-publicacao {
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  .criar-publicacao-area {
+    width: 100%;
+    height: 100%;
+    @include display-flex(center, center, row);
+
+    .acoes-criar-publicacao {
+      width: 100%;
+      max-width: 52.7rem;
+      height: 100%;
+      max-height: 56.9rem;
+      background-color: $white;
+      border-radius: 1.2rem;
+      @include display-flex(initial, initial, column);
+      transition: all 0.2s;
+
+      header {
+        width: 100%;
+        position: relative;
+        height: 100%;
+        max-height: 4.3rem;
+        @include display-flex(center, center, row);
+        border-bottom: 0.1rem solid $borda-linhas;
+
+        h4 {
+          text-align: center;
+          font-size: 1.6rem;
+          font-weight: 600;
+          line-height: 2rem;
+        }
+
+        button {
+          cursor: pointer;
+          padding: 1.6rem;
+          position: absolute;
+          display: none;
+
+          &.btn-fechar-criar-publicacao {
+            left: 0;
+          }
+
+          &.btn-seguir-mudar {
+            right: 0;
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      main {
+        width: 100%;
+        height: 100%;
+
+        .selecione {
+          width: 100%;
+          height: 100%;
+          @include display-flex(center, center, column);
+
+          gap: 2rem;
+          h5 {
+            color: $black;
+            text-align: center;
+            font-size: 1.9rem;
+            font-weight: 400;
+            line-height: 2.5rem;
+          }
+
+          .botao-padrao-criar {
+            min-width: 20rem;
+            text-align: center;
+          }
+
+          #criar-publicacao-input {
+            display: none;
+          }
+        }
+
+        .compartilhar {
+          width: 100%;
+          height: 100%;
+          @include display-flex(initial, initial, row);
+
+          .imagem-publicacao {
+            overflow: hidden;
+            border-bottom-left-radius: 1.2rem;
+            width: 100%;
+            max-width: 52.7rem;
+            height: 100%;
+
+            .swiper {
+              height: 100%;
+
+              .image {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-color: $borda-linhas;
+                height: 100%;
+              }
+
+              .swiper-button-next {
+                width: 4rem;
+                height: 4rem;
+                &::after {
+                  content: "";
+                  width: 4rem;
+                  height: 4rem;
+                  background-image: url(../img/seta-publicacao-criar.svg);
+                  background-repeat: no-repeat;
+                  background-position: center;
+                }
+              }
+
+              .swiper-button-prev {
+                width: 4rem;
+                height: 4rem;
+                &::after {
+                  content: "";
+                  width: 4rem;
+                  height: 4rem;
+                  background-image: url(../img/seta-publicacao-criar-voltar.svg);
+                  background-repeat: no-repeat;
+                  background-position: center;
+                }
+              }
+            }
+          }
+
+          .detalhes-compartilhar {
+            width: 100%;
+            max-width: 33.92rem;
+            height: 100%;
+            max-height: 52rem;
+            overflow-y: scroll;
+
+            .legenda {
+              padding: 1.8rem 1.6rem;
+              @include display-flex(initial, initial, column);
+              gap: 1.4rem;
+              border-bottom: 0.1rem solid $borda-linhas;
+
+              .perfil {
+                width: 100%;
+                @include display-flex(flex-start, center, row);
+                gap: 1.2rem;
+
+                img {
+                  width: 2.8rem;
+                  height: 2.8rem;
+                  object-fit: cover;
+                  border-radius: 1.4rem;
+                }
+
+                span {
+                  color: $black;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  font-size: 1.4rem;
+                  font-weight: 600;
+                  line-height: 1.8rem;
+                }
+              }
+
+              textarea {
+                width: 100%;
+                resize: none;
+                height: 100%;
+                min-height: 16.8rem;
+                font-size: 1.5rem;
+                line-height: 2rem;
+
+                &::placeholder {
+                  color: #c7c7c7;
+                }
+              }
+
+              .emoji {
+                height: 100%;
+                min-height: 4.4rem;
+                @include display-flex(space-between, flex-end, row);
+
+                .contagem-caractere {
+                  span {
+                    color: #c7c7c7;
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                    line-height: 1.6rem;
+                  }
+                }
+              }
+            }
+
+            .localizacao {
+              padding: 1.1rem 1.6rem;
+              width: 100%;
+              height: 100%;
+              max-height: 4.4rem;
+              @include display-flex(space-between, center, row);
+              gap: 1.7rem;
+              border-bottom: 0.1rem solid $borda-linhas;
+
+              input {
+                width: 100%;
+                font-size: 1.6rem;
+                color: $black;
+
+                &::placeholder {
+                  color: $gray;
+                }
+              }
+            }
+
+            .config-avancadas {
+              width: 100%;
+              border-bottom: 0.1rem solid $borda-linhas;
+
+              button {
+                padding: 1.4rem 1.6rem;
+                height: 100%;
+                max-height: 4.4rem;
+                cursor: pointer;
+                width: 100%;
+                @include display-flex(space-between, center, row);
+
+                span {
+                  color: $black;
+                  font-size: 1.5rem;
+                  font-weight: 400;
+                  line-height: 2rem;
+                }
+              }
+
+              .config-ativar {
+                padding: 0 1.6rem 0.8rem 1.6rem;
+                width: 100%;
+                height: 100%;
+                @include display-flex(initial, initial, column);
+                gap: 0.8rem;
+
+                > div {
+                  @include display-flex(initial, initial, column);
+
+                  .titulo {
+                    @include display-flex(space-between, center, row);
+                    gap: 3.54rem;
+
+                    h5 {
+                      white-space: break-spaces;
+                      color: $black;
+                      font-size: 1.5rem;
+                      font-weight: 400;
+                      line-height: 2rem;
+                    }
+                  }
+
+                  p {
+                    padding: 1.2rem 0;
+                    color: $gray;
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                    line-height: 1.6rem;
+                    width: 100%;
+                    max-width: 26.7rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .btn-fechar {
+      top: 0;
+      right: 0;
+      position: absolute;
+      cursor: pointer;
+      @include display-flex(flex-end, flex-start, row);
+
+      .icon-fechar {
+        margin: 1.8rem;
+      }
+    }
+  }
+}
+
+/*
+<label for="btn" class="botao-checkbox-ativo">
+                      <input type="checkbox" name="" id="btn">
+                      <span></span>
+                    </label>
+*/
+
+.btn-decisao-checkbox {
+  .botao-checkbox {
+    cursor: pointer;
+    display: block;
+    min-width: 4.4rem;
+    min-height: 2.8rem;
+    border-radius: 2.8rem;
+    background-color: $gray;
+    padding: 0.3rem;
+
+    span {
+      display: block;
+      width: 2.2rem;
+      height: 2.2rem;
+      background-color: $white;
+      border-radius: 1.1rem;
+      transform: translateX(0);
+      transition: all 0.3s;
+    }
+
+    &-ativo {
+      cursor: pointer;
+      display: block;
+      min-width: 4.4rem;
+      min-height: 2.8rem;
+      border-radius: 2.8rem;
+      background-color: $blue;
+      padding: 0.3rem;
+
+      input {
+        display: none;
+        opacity: 0;
+      }
+
+      span {
+        display: block;
+        width: 2.2rem;
+        height: 2.2rem;
+        background-color: $white;
+        border-radius: 1.1rem;
+        transform: translateX(1.6rem);
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  input {
+    display: none;
+    opacity: 0;
+  }
+}
